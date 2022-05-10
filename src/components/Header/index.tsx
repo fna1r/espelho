@@ -1,5 +1,7 @@
-
 import { Container, Content } from './styles'
+
+// Images
+import logo from '../../assets/espelho.svg'
 
 interface HeaderProps {
     onOpenNewTransactionModal: () => void;
@@ -10,7 +12,7 @@ export function Header({onOpenNewTransactionModal}: HeaderProps) {
     return (
         <Container>
             <Content>
-                <img src="" alt="Espelho Meu" />
+                <img src={logo} alt="Espelho Meu" />
                 <button type="button" onClick={onOpenNewTransactionModal}>
                         Agendar
                 </button>

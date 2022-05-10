@@ -23,7 +23,7 @@ export function App() {
     <TrasactionsProvider> 
       <Header onOpenNewTransactionModal={handelOpenNewTransactionModal} /> 
       <Dashboard />
-      <NewTransactionModal 
+      <NewTransactionModal
         isOpen={isNewTransactionModalOpen}
         onRequestClose={handelCloseNewTransactionModal}
       />

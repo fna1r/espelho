@@ -1,0 +1,30 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "name": "Clara",
+      "category": "Cabelo",
+      "hour": "18:05",
+      "data": "2022-05-10",
+      "createdAt": "2022-05-09T20:04:28.227Z"
+    },
+    {
+      "name": "Teste",
+      "category": "Teste",
+      "type": "deposit",
+      "hour": "02:07",
+      "data": "2022-05-20",
+      "createdAt": "2022-05-10T03:05:46.836Z",
+      "id": 2
+    },
+    {
+      "name": "Teste1",
+      "category": "teste1",
+      "type": "deposit",
+      "hour": "01:07",
+      "data": "19/05/2022",
+      "createdAt": "2022-05-10T03:06:45.068Z",
+      "id": 3
+    }
+  ]
+}

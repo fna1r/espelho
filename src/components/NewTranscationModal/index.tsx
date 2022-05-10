@@ -5,7 +5,7 @@ import closeImg from '../../assets/Vector.svg';
 
 
 
-import { Container, TransactionTypeContainer, RadioBox } from './styles';
+import { Container} from './styles';
 
 
 interface NewTransactionModalProps {
@@ -23,7 +23,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
     const [category, setCategory] = useState('')
 
     const [hour, setHour] = useState('')
-    const [dataa, setDataa] = useState('')
+    const [data, setData] = useState('')
     const [type, setSytpe] = useState('deposit')
 
     async function handleCreateNewTransaction(event: FormEvent) {
@@ -34,13 +34,13 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
             category,
             type,
             hour,
-            dataa
+            data
         })
 
         setName('')
         setCategory('')
         setHour('')
-        setDataa('')
+        setData('')
         setSytpe('deposit')
         onRequestClose()
     }
@@ -85,9 +85,9 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
 
                 <input
                     type='date'
-                    value={dataa}
+                    value={data}
                     required pattern="[0-9]{4}-[0-9]"
-                    onChange={event => setDataa(event.target.value)} // esse event sempre retornará o valor em string(texto)
+                    onChange={event => setData(event.target.value)} // esse event sempre retornará o valor em string(texto)
                 />
 
 
