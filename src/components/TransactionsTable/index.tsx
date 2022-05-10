@@ -17,15 +17,12 @@ interface Transaction {
 
 
 export function TrasactionsTable() {
-    const { transactions, deleteTransaction, updateTransaction } = useTransactions()
+    const { transactions, deleteTransaction } = useTransactions()
 
     const handleDeleteAppointment = useCallback(async (id: number) => {
         await deleteTransaction(id);
     },[])
 
-    const handleEditAppointment = useCallback(async (transaction: Transaction) => {
-        await updateTransaction(transaction);
-    }, [])
 
     return (
         <Container>
@@ -36,7 +33,6 @@ export function TrasactionsTable() {
                         <th>Serviço</th>
                         <th>Data</th> 
                         <th>Horário</th>
-                        <th>Editar</th>
                         <th>Excluir</th>
                     </tr>
                 </thead>
@@ -49,7 +45,6 @@ export function TrasactionsTable() {
                                 <td>{transaction.category}</td>
                                 <td>{transaction.data}</td>
                                 <td>{transaction.hour}</td>
-                                <td onClick={() => handleEditAppointment(transaction)}><i><RiPencilLine /></i></td>
                                 <td onClick={() => handleDeleteAppointment(transaction.id)}><i><RiDeleteBin6Line/></i></td>
                             </tr>
                         ) 
