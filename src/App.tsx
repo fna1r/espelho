@@ -2,7 +2,7 @@ import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header";
 import Modal from 'react-modal';
 import { useState } from "react";
-import { NewTransactionModal } from "./components/NewTranscationModal";
+import { NewTransactionModal } from "./components/NewAppointmentModal";
 import { TrasactionsProvider } from "./hooks/useTransactions";
 import { GlobalStyle } from "./styles/global";
 

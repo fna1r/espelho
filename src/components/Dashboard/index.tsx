@@ -1,4 +1,4 @@
-import { TrasactionsTable } from '../TransactionsTable'
+import { TrasactionsTable } from '../AppoitmentTable'
 import { Container } from './styles'
 
 export function Dashboard() {
