@@ -1,26 +1,17 @@
 import { useCallback} from 'react'
 
-import {useTransactions } from '../../hooks/useTransactions';
+import {useAppointments } from '../../hooks/useTransactions';
 import { Container } from './styles'
 
 // Icons
-import { RiDeleteBin6Line, RiPencilLine } from "react-icons/ri";
-interface Transaction {
-    id: number;
-    name: string;
-    type: string;
-    category: string;
-    createdAt: string;
-    hour: string;
-    data: string;
-} 
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 
 export function TrasactionsTable() {
-    const { transactions, deleteTransaction } = useTransactions()
+    const { appointements, deleteAppointment } = useAppointments()
 
     const handleDeleteAppointment = useCallback(async (id: number) => {
-        await deleteTransaction(id);
+        await deleteAppointment(id);
     },[])
 
 
@@ -38,14 +29,14 @@ export function TrasactionsTable() {
                 </thead>
 
                 <tbody>
-                    {transactions.map(transaction => {
+                    {appointements.map(appointement => {
                         return (
-                            <tr key={transaction.id}>
-                                <td>{transaction.name}</td>
-                                <td>{transaction.category}</td>
-                                <td>{transaction.data}</td>
-                                <td>{transaction.hour}</td>
-                                <td onClick={() => handleDeleteAppointment(transaction.id)}><i><RiDeleteBin6Line/></i></td>
+                            <tr key={appointement.id}>
+                                <td>{appointement.name}</td>
+                                <td>{appointement.category}</td>
+                                <td>{appointement.data}</td>
+                                <td>{appointement.hour}</td>
+                                <td onClick={() => handleDeleteAppointment(appointement.id)}><i><RiDeleteBin6Line/></i></td>
                             </tr>
                         ) 
                     })}

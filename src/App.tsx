@@ -3,7 +3,7 @@ import { Header } from "./components/Header";
 import Modal from 'react-modal';
 import { useState } from "react";
 import { NewTransactionModal } from "./components/NewAppointmentModal";
-import { TrasactionsProvider } from "./hooks/useTransactions";
+import { AppointmentsProvider } from "./hooks/useTransactions";
 import { GlobalStyle } from "./styles/global";
 
 Modal.setAppElement('#root')
@@ -20,7 +20,7 @@ export function App() {
   }
   
   return (
-    <TrasactionsProvider> 
+    <AppointmentsProvider> 
       <Header onOpenNewTransactionModal={handelOpenNewTransactionModal} /> 
       <Dashboard />
       <NewTransactionModal
@@ -28,7 +28,7 @@ export function App() {
         onRequestClose={handelCloseNewTransactionModal}
       />
       <GlobalStyle />
-    </TrasactionsProvider> 
+    </AppointmentsProvider> 
 
   );
 }

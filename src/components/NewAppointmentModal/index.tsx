@@ -1,6 +1,6 @@
 import Modal from 'react-modal';
 import { FormEvent, useState } from 'react';
-import { useTransactions } from '../../hooks/useTransactions';
+import { useAppointments } from '../../hooks/useTransactions';
 import closeImg from '../../assets/Vector.svg';
 
 
@@ -15,7 +15,7 @@ interface NewTransactionModalProps {
 
 
 export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionModalProps) {
-    const { createTransaction } = useTransactions()
+    const { createAppointment } = useAppointments()
 
 
     // sempre inicializa um estado no formato que ele irá receber os valores
@@ -29,7 +29,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
     async function handleCreateNewTransaction(event: FormEvent) {
         event.preventDefault() // para não recarregar a pagina após a entrada de dados
 
-        await createTransaction({
+        await createAppointment({
             name,
             category,
             type,
