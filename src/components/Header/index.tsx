@@ -14,7 +14,7 @@ export function Header({onOpenNewTransactionModal}: HeaderProps) {
             <Content>
                 <img src={logo} alt="Espelho Meu" />
                 <button type="button" onClick={onOpenNewTransactionModal}>
-                        Agendarrr
+                        Agendar
                 </button>
             </Content>
         </Container>
