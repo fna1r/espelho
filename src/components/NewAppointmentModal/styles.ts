@@ -34,12 +34,11 @@ export const Container = styled.form`
         width: 100%;
         padding: 0 1.5rem;
         height: 4rem;
-        background: var(--green);
+        background: #A40383;
         color: #FFF;
         font-size: 1rem;
         margin-top: 1.5rem;
         font-weight: 600;
-
         transition: 0.5;
 
         &:hover {

@@ -26,15 +26,15 @@ export const Container = styled.div`
                 color: var(--text-title);
             }
 
-            // Quando a class for deposito mudar a cor da letra para green
-            &.deposit {
-                color: var(--green);
-            }
-
-                        // Quando a class for retirada mudar a cor da letra para red
-            &.withdraw {
-                color: var(--red);
-            }
+            
         }
+    }
+`
+export const Td = styled.td`
+    cursor: pointer;
+    
+
+    :hover{
+        filter:brightness(0.9);
     }
 `

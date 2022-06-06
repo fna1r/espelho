@@ -1,7 +1,7 @@
 import { useCallback} from 'react'
 
 import {useAppointments } from '../../hooks/useTransactions';
-import { Container } from './styles'
+import { Container, Td } from './styles'
 
 // Icons
 import { RiDeleteBin6Line } from "react-icons/ri";
@@ -36,7 +36,7 @@ export function TrasactionsTable() {
                                 <td>{appointement.category}</td>
                                 <td>{appointement.data}</td>
                                 <td>{appointement.hour}</td>
-                                <td onClick={() => handleDeleteAppointment(appointement.id)}><i><RiDeleteBin6Line/></i></td>
+                                <Td onClick={() => handleDeleteAppointment(appointement.id)}><i><RiDeleteBin6Line/></i></Td>
                             </tr>
                         ) 
                     })}
