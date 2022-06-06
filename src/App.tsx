@@ -22,11 +22,8 @@ export function App() {
   return (
     <AppointmentsProvider> 
       <Header onOpenNewTransactionModal={handelOpenNewTransactionModal} /> 
-      <Dashboard />
-      <NewTransactionModal
-        isOpen={isNewTransactionModalOpen}
-        onRequestClose={handelCloseNewTransactionModal}
-      />
+      
+
       <GlobalStyle />
     </AppointmentsProvider> 
 
